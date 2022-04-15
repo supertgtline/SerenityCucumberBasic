@@ -38,6 +38,14 @@
             <version>${serenity.cucumber.version}</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- POI JARS STARTS -->
 
@@ -105,7 +113,7 @@
                 <configuration>
                     <includes>
 
-                        <include>**/testcases/*.java</include>
+                        <include>**/runner/*.java</include>
                         <!-- <include>**/testcases/**/*.java</include> -->
                         <!--	<include>**/testcases/*.java</include> -->
 

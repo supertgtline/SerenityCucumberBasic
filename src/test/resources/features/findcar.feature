@@ -6,4 +6,11 @@ Feature: Finding New Cars
     Given user navigate to the website
     When user choose menu as new car
     Then user click on find new cars
-    And user search for kia car
+    And user search for <brand> car
+
+    Examples: |
+    | brand   |
+    | Kia     |
+    | Toyota  |
+    | Huyndai |
+    | Honda   |
