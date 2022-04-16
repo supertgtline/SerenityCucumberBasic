@@ -5,6 +5,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.List;
+
 public class NewCarSteps {
     @Given("user navigate to the website")
     public void user_navigate_to_the_website() {
@@ -16,14 +18,13 @@ public class NewCarSteps {
         System.out.println("@When -- user choose menu as new car");
     }
     @Then("user click on find new cars")
-    public void user_click_on_find_new_cars() {
+    public void user_click_on_find_new_cars(List<String> price) {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("@Then -- user click find new cars");
-    }
-    @Then("user search for <brand> car")
-    public void user_search_for_kia_car(String brandName) {
-        // Write code here that turns the phrase above into concrete actions
-        System.out.println("@Then -- user click find new cars");
+        System.out.println("@Then -- user click find new cars with price: "+price.get(1));
     }
 
+    @And("user search for (.$) car")
+    public void userSearchForBrandCar() {
+        System.out.println("@And -- user search for new cars");
+    }
 }
