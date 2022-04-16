@@ -23,8 +23,8 @@ public class NewCarSteps {
         System.out.println("@Then -- user click find new cars with price: "+price.get(1));
     }
 
-    @And("user search for (.$) car")
-    public void userSearchForBrandCar() {
-        System.out.println("@And -- user search for new cars");
+    @And("^user search for (.*) car$")
+    public void userSearchForBrandCar(String brandCar) {
+        System.out.println("@And -- user search for new cars: "+brandCar);
     }
 }
